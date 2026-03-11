@@ -1,0 +1,21 @@
+# Frontier: Syndicate Uplink Modchip — use on a PDA to add traitor syndicate uplink (ringtone code + store), same as SS14.
+- type: entity
+  parent: BaseItem
+  id: UplinkUnlocker
+  name: syndicate-uplink-modchip-name
+  description: syndicate-uplink-modchip-description
+  components:
+    - type: Sprite
+      sprite: Objects/Devices/encryption_keys.rsi
+      layers:
+        - state: crypt_red
+        - state: synd_label
+    - type: Icon
+      sprite: Objects/Devices/encryption_keys.rsi
+      state: synd_label
+    - type: Item
+      size: Small
+    - type: UplinkUnlocker
+      balance: 0
+      giveDiscounts: false
+      useSound: /Audio/Machines/id_insert.ogg

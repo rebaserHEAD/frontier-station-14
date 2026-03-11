@@ -55,3 +55,17 @@
     - Doubloon
     balance:
       Doubloon: 0
+
+# Frontier: ContraVend at LPB — separate catalog so it can diverge from PDA uplink
+- type: entity
+  id: StorePresetContraVend
+  abstract: true
+  components:
+  - type: Store
+    name: store-preset-name-uplink
+    categories:
+    - ContraVend
+    currencyWhitelist:
+    - Telecrystal
+    balance:
+      Telecrystal: 0

@@ -67,21 +67,11 @@ public sealed class RingerSystem : SharedRingerSystem
     /// <inheritdoc/>
     public override bool TryToggleUplink(EntityUid uid, Note[] ringtone, EntityUid? user = null)
     {
-        if (!TryComp<RingerUplinkComponent>(uid, out var uplink))
-            return false;
+        if (TryComp<RingerUplinkComponent>(uid, out var uplink) && HasComp<StoreComponent>(uid)
+            && uplink.Code != null && uplink.Code.SequenceEqual(ringtone))
+            return ToggleUplinkInternal((uid, uplink));
 
-        if (!HasComp<StoreComponent>(uid))
-            return false;
-
-        // Wasn't generated yet
-        if (uplink.Code is null)
-            return false;
-
-        // On the server, we always check if the code matches
-        if (!uplink.Code.SequenceEqual(ringtone))
-            return false;
-
-        return ToggleUplinkInternal((uid, uplink));
+        return false;
     }
 
     /// <summary>

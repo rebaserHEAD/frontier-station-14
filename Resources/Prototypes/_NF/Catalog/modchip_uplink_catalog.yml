@@ -1,0 +1,30 @@
+# Frontier: Syndicate Uplink Modchip — only encryption key (1 TC), LPB pinpointer (8 TC), business cards (free)
+- type: listing
+  id: ModchipUplinkEncryptionKey
+  name: modchip-uplink-encryption-key-name
+  description: modchip-uplink-encryption-key-desc
+  productEntity: EncryptionKeySyndie
+  cost:
+    Telecrystal: 1
+  categories:
+    - UplinkSyndicateModchip
+
+- type: listing
+  id: ModchipUplinkPinpointerLPB
+  name: modchip-uplink-pinpointer-lpb-name
+  description: modchip-uplink-pinpointer-lpb-desc
+  productEntity: PinpointerSyndicatePOI
+  cost:
+    Telecrystal: 8
+  categories:
+    - UplinkSyndicateModchip
+
+- type: listing
+  id: ModchipUplinkBusinessCards
+  name: modchip-uplink-business-cards-name
+  description: modchip-uplink-business-cards-desc
+  productEntity: SyndicateBusinessCardPack
+  cost:
+    Telecrystal: 0
+  categories:
+    - UplinkSyndicateModchip

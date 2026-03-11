@@ -709,13 +709,6 @@ entities:
     - type: Transform
       pos: -3.5,5.5
       parent: 1
-- proto: PinpointerSyndicatePOISpawner
-  entities:
-  - uid: 114
-    components:
-    - type: Transform
-      pos: -0.5,1.5
-      parent: 1
 - proto: PlastitaniumWindow
   entities:
   - uid: 21

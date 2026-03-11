@@ -109,8 +109,9 @@
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/expeditionaryflatpackvend.rsi
 
+# Frontier: uses StorePresetContraVend + contravend_catalog so PDA uplink stays separate
 - type: entity
-  parent: [BaseStructureDisableAnchoring, StorePresetUplink, VendingMachine]
+  parent: [BaseStructureDisableAnchoring, StorePresetContraVend, VendingMachine]
   id: VendingMachineSyndieContraband
   name: ContraVend
   description: Wanted across multiple sectors!

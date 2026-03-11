@@ -1,0 +1,21 @@
+# Frontier: pack of 5 syndicate business cards for smuggling uplink store
+- type: entity
+  parent: BaseItem
+  id: SyndicateBusinessCardPack
+  name: syndicate business cards
+  description: A pack of five syndicate calling cards.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/bureaucracy.rsi
+      state: syndicate_card
+    - type: Item
+      sprite: Objects/Misc/bureaucracy.rsi
+      size: Small
+    - type: Storage
+      maxItemSize: Small
+      grid:
+        - 0,0,2,2
+    - type: StorageFill
+      contents:
+        - id: SyndicateBusinessCard
+          amount: 5

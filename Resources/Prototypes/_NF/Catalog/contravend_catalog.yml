@@ -1,0 +1,181 @@
+# Frontier: ContraVend catalog — copy of _NF uplink catalog so ContraVend can diverge from PDA uplink.
+# Same contents initially; listing IDs prefixed to avoid collision.
+# Guns
+- type: listing
+  id: ContraVendUplinkNFPistolViper
+  name: uplink-pistol-viper-name
+  description: uplink-pistol-viper-desc
+  productEntity: NFWeaponPistolViper
+  discountCategory: rareDiscounts
+  cost:
+    Telecrystal: 3
+  categories:
+    - ContraVend
+
+- type: listing
+  id: ContraVendUplinkNFRevolverRitland
+  name: uplink-revolver-ritland-name
+  description: uplink-revolver-ritland-desc
+  productEntity: NFWeaponRevolverRitland45
+  discountCategory: rareDiscounts
+  cost:
+    Telecrystal: 4
+  categories:
+    - ContraVend
+
+- type: listing
+  id: ContraVendUplinkNFPistolCobra
+  name: uplink-pistol-cobra-name
+  description: uplink-pistol-cobra45-desc
+  productEntity: NFWeaponPistolCobra
+  discountCategory: rareDiscounts
+  cost:
+    Telecrystal: 4
+  categories:
+    - ContraVend
+
+- type: listing
+  id: ContraVendUplinkNFRifleBarlows
+  name: uplink-rifle-mosin-name
+  description: uplink-rifle-mosin-desc
+  productEntity: NFWeaponRifleBarlowsBolt
+  cost:
+    Telecrystal: 1
+  categories:
+    - ContraVend
+
+# Ammo
+- type: listing
+  id: ContraVendUplinkNFPistol9mmMagazine
+  name: uplink-pistol-magazine-name
+  description: uplink-pistol-magazine-desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi, state: red-icon }
+  productEntity: NFMagazinePistol35
+  cost:
+    Telecrystal: 1
+  categories:
+    - ContraVend
+
+- type: listing
+  id: ContraVendUplinkNFMagazinePistolSubMachineGun
+  name: uplink-pistol-magazine-c20r-name
+  description: uplink-pistol-magazine-c20r-desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag.rsi, state: red-icon }
+  productEntity: NFMagazineSubMachineGun35
+  cost:
+    Telecrystal: 2
+  categories:
+    - ContraVend
+
+- type: listing
+  id: ContraVendUplinkNFMagazineShotgunPellet
+  name: uplink-magazine-bulldog-pellet-name
+  description: uplink-magazine-bulldog-pellet-desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Shotgun/m12.rsi, state: pellets }
+  productEntity: NFMagazineShotgunDrum
+  cost:
+    Telecrystal: 2
+  categories:
+    - ContraVend
+
+- type: listing
+  id: ContraVendUplinkNFMagazineShotgunSlug
+  name: uplink-magazine-bulldog-slug-name
+  description: uplink-magazine-bulldog-slug-desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Shotgun/m12.rsi, state: slug }
+  productEntity: NFMagazineShotgunDrumSlug
+  cost:
+    Telecrystal: 3
+  categories:
+    - ContraVend
+
+- type: listing
+  id: ContraVendUplinkNFMagazinePistolCaselessRifle
+  name: uplink-pistol-magazine-cobra-name
+  description: uplink-pistol-magazine-cobra-desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_pistol_mag.rsi, state: red-icon }
+  productEntity: NFMagazinePistol45
+  cost:
+    Telecrystal: 1
+  categories:
+    - ContraVend
+
+- type: listing
+  id: ContraVendUplinkNFSpeedLoaderMagnum
+  name: uplink-speedloader-magnum-non-ap-name
+  description: uplink-speedloader-magnum-non-ap-desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: icon }
+  productEntity: NFSpeedLoaderPistol45
+  cost:
+    Telecrystal: 3
+  categories:
+    - ContraVend
+
+- type: listing
+  id: ContraVendUplinkNFMosinAmmo
+  name: uplink-mosin-ammo-name
+  description: uplink-mosin-ammo-desc
+  icon: { sprite: /Textures/_NF/Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi, state: icon-30 }
+  productEntity: NFAmmunitionBoxRifle30
+  cost:
+    Telecrystal: 1
+  categories:
+    - ContraVend
+
+- type: listing
+  id: ContraVendUplinkNFHristovAmmo
+  name: uplink-sniper-ammo-name
+  description: uplink-sniper-ammo-desc
+  icon: { sprite: /Textures/_NF/Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi, state: icon-60 }
+  productEntity: NFAmmunitionBoxRifle60
+  cost:
+    Telecrystal: 2
+  categories:
+    - ContraVend
+
+# Frontier
+- type: listing
+  id: ContraVendUplinkEmpGrenadeLauncherBundle
+  name: uplink-emp-grenade-launcher-bundle-name
+  description: uplink-emp-grenade-launcher-bundle-desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Launchers/china_lake.rsi, state: icon }
+  productEntity: ClothingBackpackDuffelSyndicateFilledEmpGrenadeLauncher
+  cost:
+    Telecrystal: 25
+  categories:
+    - ContraVend
+
+- type: listing
+  id: ContraVendUplinkSecuritySpaceBladeSyndicate
+  name: uplink-spaceblade-syndicate-name
+  description: uplink-spaceblade-syndicate-desc
+  productEntity: SpaceBladeContra
+  icon: { sprite: _NF/Objects/Fun/spaceblade.rsi, state: contraband }
+  cost:
+    Telecrystal: 1
+  categories:
+    - ContraVend
+
+- type: listing
+  id: ContraVendUplinkEmagPass
+  name: uplink-emag-pass-name
+  description: uplink-emag-pass-desc
+  productEntity: EmagPass
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+    - ContraVend
+
+- type: listing
+  id: ContraVendUplinkSecuritySyndicateSegway
+  name: uplink-syndicate-segway-name
+  description: uplink-syndicate-segway-desc
+  productEntity: NFCrateFunSyndicateSegway
+  icon: { sprite: Objects/Vehicles/syndicatesegway.rsi, state: vehicle }
+  cost:
+    Telecrystal: 25
+  categories:
+    - ContraVend

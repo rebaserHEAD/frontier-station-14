@@ -1,11 +1,14 @@
 using Content.Server.Cargo.Components;
 using Content.Server._NF.Cargo.Components;
+using Content.Server._NF.Trade;
 using Content.Shared._NF.Bank.Components;
 using Content.Shared._NF.Cargo.BUI;
 using Content.Shared.Cargo;
 using Content.Shared.Cargo.Events;
+using Content.Shared.Contraband;
 using Content.Shared.GameTicking;
 using Content.Shared.Mobs;
+using Content.Shared._NF.Trade;
 using Robust.Shared.Audio;
 using Robust.Shared.Map;
 using System.Numerics;
@@ -160,6 +163,8 @@ public sealed partial class NFCargoSystem
         toSell = new HashSet<EntityUid>();
         additionalCurrency = new();
 
+        var owningStation = _station.GetOwningStation(gridUid);
+
         foreach (var (palletUid, _, _) in GetCargoPallets(consoleUid, gridUid, BuySellType.Sell))
         {
             // Containers should already get the sell price of their children so can skip those.
@@ -187,6 +192,32 @@ public sealed partial class NFCargoSystem
                 if (_blacklistQuery.HasComponent(ent))
                     continue;
 
+                // Frontier: contraband crates: only at destination, 1 TC normal / 2-4 TC express on-time, zero reward if late
+                if (TryComp(ent, out TradeCrateComponent? tradeCrate) && HasComp<ContrabandComponent>(ent))
+                {
+                    if (tradeCrate.DestinationStation == EntityUid.Invalid)
+                        continue;
+                    if (owningStation is not { } stationUid ||
+                        (stationUid != tradeCrate.DestinationStation && !HasComp<TradeCrateWildcardDestinationComponent>(stationUid)))
+                        continue;
+                    if (tradeCrate.ExpressDeliveryTime != null && _timing.CurTime > tradeCrate.ExpressDeliveryTime.Value)
+                        continue;
+
+                    var contraPrice = _pricing.GetPrice(ent);
+                    if (contraPrice == 0)
+                        continue;
+                    toSell.Add(ent);
+                    if (HasComp<IgnoreMarketModifierComponent>(ent))
+                        noMultiplierAmount += contraPrice;
+                    else
+                        amount += contraPrice;
+                    var tcAmount = tradeCrate.ExpressDeliveryTime != null ? _random.Next(2, 5) : 1;
+                    if (!additionalCurrency.ContainsKey("Telecrystal"))
+                        additionalCurrency["Telecrystal"] = 0;
+                    additionalCurrency["Telecrystal"] += tcAmount;
+                    continue;
+                }
+
                 var price = _pricing.GetPrice(ent);
                 if (price == 0)
                     continue;
@@ -198,7 +229,7 @@ public sealed partial class NFCargoSystem
                 else
                     amount += price;
                 
-                // Check for any additional currency payouts
+                // Check for any additional currency payouts (contraband TC handled above)
                 if (TryComp(ent, out AdditionalPalletCurrencyComponent? currencyComponent))
                 {
                     if (_random.Prob(currencyComponent.SpawnProbability))

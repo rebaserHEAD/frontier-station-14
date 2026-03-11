@@ -43,6 +43,7 @@
         - CrateSyndicateSuperSurplusBundle
       rareChance: 0.1
 
+# Frontier: syndicate pinpointer / loot spawner (other maps)
 - type: entity
   name: Syndicate POI Pinpointer
   id: PinpointerSyndicatePOISpawner

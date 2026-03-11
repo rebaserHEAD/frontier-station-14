@@ -126,6 +126,4 @@
     - BlackMarket
   - type: PirateBountyItem
     id: ContrabandCrate
-  - type: AdditionalPalletCurrency
-    currency: Telecrystal
-    prob: 0.134
+  # Frontier: TC for contraband is now 1 (normal) / 2-4 (express on-time) only at destination; see NFCargoSystem.Pallet.cs

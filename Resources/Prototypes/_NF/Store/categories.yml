@@ -48,3 +48,13 @@
   id: UplinkPirateExplosives
   name: store-category-pirateexplosives
 
+# Frontier: Syndicate Uplink Modchip — PDA store restricted to encryption key, LPB pinpointer, business cards
+- type: storeCategory
+  id: UplinkSyndicateModchip
+  name: store-category-syndicate-modchip
+
+# Frontier: ContraVend at LPB (separate from PDA uplink so catalog can diverge)
+- type: storeCategory
+  id: ContraVend
+  name: store-category-contravend
+

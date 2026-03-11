@@ -1,3 +1,14 @@
+# Frontier: Syndicate Uplink Modchip — role that shows PDA uplink code in character briefing (same as traitor)
+- type: entity
+  parent: BaseMindRole
+  id: MindRoleUplinkCode
+  name: role-name-uplink-access
+  description: Uplink code briefing
+  components:
+  - type: MindRole
+    sortWeight: -5
+  - type: UplinkCodeBriefing
+
 # Pirate
 - type: entity
   parent: BaseMindRoleAntag
