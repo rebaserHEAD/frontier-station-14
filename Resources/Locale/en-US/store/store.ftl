@@ -13,3 +13,7 @@ store-not-account-owner = This {$store} is not bound to you!
 
 store-preset-name-uplink = Uplink
 store-preset-name-spellbook = Spellbook
+
+# Frontier: Syndicate Uplink Modchip (entity name/desc so it resolves when _NF locale not yet loaded)
+syndicate-uplink-modchip-name = Syndicate Uplink Modchip
+syndicate-uplink-modchip-description = A one-time use modchip. Install in a PDA to unlock the syndicate uplink; your access code will appear in your character briefing.
