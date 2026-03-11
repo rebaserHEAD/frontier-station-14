@@ -1,6 +1,6 @@
 using Content.Shared.Roles;
 
-namespace Content.Server._NF.UplinkUnlocker.Components;
+namespace Content.Server._NF.SyndicateUplinkModchip.Components;
 
 /// <summary>
 ///     Mind role component that shows the PDA uplink code in the character briefing (same UI as traitor uplink code).

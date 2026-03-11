@@ -1,14 +1,14 @@
 using Content.Shared.FixedPoint;
 using Robust.Shared.Audio;
 
-namespace Content.Server._NF.UplinkUnlocker.Components;
+namespace Content.Server._NF.SyndicateUplinkModchip.Components;
 
 /// <summary>
 ///     Syndicate Uplink Modchip: when used on a PDA, adds the traitor syndicate uplink (same as SS14: ringtone code + store).
 ///     Consumed on use.
 /// </summary>
 [RegisterComponent]
-public sealed partial class UplinkUnlockerComponent : Component
+public sealed partial class SyndicateUplinkModchipComponent : Component
 {
     /// <summary>
     ///     Telecrystal balance to grant when unlocking the PDA uplink.
@@ -23,7 +23,7 @@ public sealed partial class UplinkUnlockerComponent : Component
     public bool GiveDiscounts = false;
 
     /// <summary>
-    ///     Sound played when the modchip is successfully used on a PDA. Defaults to PDA insert sound.
+    ///     Sound played when the modchip is successfully used on a PDA. Prototype uses emag (sparks) by default.
     /// </summary>
     [DataField]
     public SoundSpecifier? UseSound = new SoundPathSpecifier("/Audio/Machines/id_insert.ogg");

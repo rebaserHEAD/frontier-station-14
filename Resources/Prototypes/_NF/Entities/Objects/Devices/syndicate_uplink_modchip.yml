@@ -1,7 +1,7 @@
-# Frontier: Syndicate Uplink Modchip — use on a PDA to add traitor syndicate uplink (ringtone code + store), same as SS14.
+# Frontier: Syndicate Uplink Modchip — use on a PDA to add traitor syndicate uplink (ringtone + store), same as SS14.
 - type: entity
   parent: BaseItem
-  id: UplinkUnlocker
+  id: SyndicateUplinkModchip
   name: syndicate-uplink-modchip-name
   description: syndicate-uplink-modchip-description
   components:
@@ -15,7 +15,8 @@
       state: synd_label
     - type: Item
       size: Small
-    - type: UplinkUnlocker
+    - type: SyndicateUplinkModchip
       balance: 0
       giveDiscounts: false
-      useSound: /Audio/Machines/id_insert.ogg
+      useSound:
+        collection: sparks

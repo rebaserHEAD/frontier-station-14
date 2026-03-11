@@ -1,5 +1,5 @@
 using Content.Server.Antag;
-using Content.Server._NF.UplinkUnlocker.Components;
+using Content.Server._NF.SyndicateUplinkModchip.Components;
 using Content.Server.PDA.Ringer;
 using Content.Server.Roles;
 using Content.Server.Traitor.Uplink;
@@ -12,13 +12,13 @@ using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server._NF.UplinkUnlocker;
+namespace Content.Server._NF.SyndicateUplinkModchip;
 
 /// <summary>
 ///     Handles using the Syndicate Uplink Modchip on a PDA to add the traitor syndicate uplink (ringtone + store).
 ///     Grants a special role so the uplink code appears in the character briefing (same as traitor).
 /// </summary>
-public sealed class UplinkUnlockerSystem : EntitySystem
+public sealed class SyndicateUplinkModchipSystem : EntitySystem
 {
     [Dependency] private readonly AntagSelectionSystem _antag = default!;
     [Dependency] private readonly UplinkSystem _uplink = default!;
@@ -35,7 +35,7 @@ public sealed class UplinkUnlockerSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<UplinkUnlockerComponent, AfterInteractEvent>(OnAfterInteract);
+        SubscribeLocalEvent<SyndicateUplinkModchipComponent, AfterInteractEvent>(OnAfterInteract);
         SubscribeLocalEvent<UplinkCodeBriefingComponent, GetBriefingEvent>(OnGetBriefing);
     }
 
@@ -46,7 +46,7 @@ public sealed class UplinkUnlockerSystem : EntitySystem
         args.Append(Loc.GetString("traitor-role-uplink-code-short", ("code", ent.Comp.Code)));
     }
 
-    private void OnAfterInteract(Entity<UplinkUnlockerComponent> ent, ref AfterInteractEvent args)
+    private void OnAfterInteract(Entity<SyndicateUplinkModchipComponent> ent, ref AfterInteractEvent args)
     {
         if (args.Handled || !args.CanReach || args.Target is not { } target)
             return;
