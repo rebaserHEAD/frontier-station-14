@@ -306,11 +306,3 @@ Resources/MapImages
 
 # Direnv stuff
 .direnv/
-.cursor/rules/agent-context.mdc
-.cursor/rules/assets-and-rsi.mdc
-.cursor/rules/csharp-conventions.mdc
-.cursor/rules/frontier-project.mdc
-.cursor/rules/ss14-ecs-and-systems.mdc
-.cursor/rules/ss14-general-conventions.mdc
-.cursor/rules/yaml-and-prototypes.mdc
-.cursorrules
