@@ -10,18 +10,22 @@
   - ShipyardAmbition
   - ShipyardAnchor
   - ShipyardApothecary
+  - ShipyardBackpacker
+  - ShipyardBalena
   - ShipyardBarge
   - ShipyardBaroness
   - ShipyardBocadillo
   - ShipyardBodkin
   - ShipyardBookworm
   - ShipyardBrigand
+  - ShipyardBroom
   - ShipyardBulker
   - ShipyardCaladrius
   - ShipyardCamper
   - ShipyardCeres
   - ShipyardCharon
   - ShipyardChisel
+  - ShipyardCoffeehouse
   - ShipyardComet
   - ShipyardConstruct
   - ShipyardCopperhead
@@ -45,8 +49,10 @@
   - ShipyardHound
   - ShipyardInvestigator
   - ShipyardIzakaya
+  - ShipyardJackrabbit
   - ShipyardKestrel
   - ShipyardKilderkin
+  - ShipyardLanternMk2
   - ShipyardLiquidator
   - ShipyardLoader
   - ShipyardLyrae
@@ -60,6 +66,7 @@
   - ShipyardProspector
   - ShipyardPulsar
   - ShipyardRetort
+  - ShipyardRusty
   - ShipyardSearchlight
   - ShipyardSkipper
   - ShipyardSpirit
@@ -104,6 +111,16 @@
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Aegis.xml"
 
 - type: guideEntry
+  id: ShipyardBackpacker
+  name: guide-entry-shipyard-backpacker
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Backpacker.xml"
+
+- type: guideEntry
+  id: ShipyardBalena
+  name: guide-entry-shipyard-balena
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Balena.xml"
+
+- type: guideEntry
   id: ShipyardBarge
   name: guide-entry-shipyard-barge
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Barge.xml"
@@ -134,6 +151,11 @@
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Brigand.xml"
 
 - type: guideEntry
+  id: ShipyardBroom
+  name: guide-entry-shipyard-broom
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Broom.xml"
+
+- type: guideEntry
   id: ShipyardBulker
   name: guide-entry-shipyard-bulker
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Bulker.xml"
@@ -162,6 +184,11 @@
   id: ShipyardChisel
   name: guide-entry-shipyard-chisel
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Chisel.xml"
+
+- type: guideEntry
+  id: ShipyardCoffeehouse
+  name: guide-entry-shipyard-coffeehouse
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Coffeehouse.xml"
 
 - type: guideEntry
   id: ShipyardComet
@@ -279,6 +306,11 @@
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Izakaya.xml"
 
 - type: guideEntry
+  id: ShipyardJackrabbit
+  name: guide-entry-shipyard-jackrabbit
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Jackrabbit.xml"
+
+- type: guideEntry
   id: ShipyardKestrel
   name: guide-entry-shipyard-kestrel
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Kestrel.xml"
@@ -287,6 +319,11 @@
   id: ShipyardKilderkin
   name: guide-entry-shipyard-kilderkin
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Kilderkin.xml"
+
+- type: guideEntry
+  id: ShipyardLanternMk2
+  name: guide-entry-shipyard-lantern-mk2
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/LanternMk2.xml"
 
 - type: guideEntry
   id: ShipyardLiquidator
@@ -354,6 +391,11 @@
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Retort.xml"
 
 - type: guideEntry
+  id: ShipyardRusty
+  name: guide-entry-shipyard-rusty
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Rusty.xml"
+
+- type: guideEntry
   id: ShipyardSearchlight
   name: guide-entry-shipyard-searchlight
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Searchlight.xml"
@@ -386,7 +428,7 @@
 - type: guideEntry
   id: ShipyardStronghold
   name: guide-entry-shipyard-stronghold
-  text: "/ServerInfo/_NF/Guidebook/Shipyard/Stronghold.xml"  
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Stronghold.xml"
 
 - type: guideEntry
   id: ShipyardSurveyor
